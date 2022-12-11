@@ -1,7 +1,7 @@
 # Some notes on AI
 
-A couple of weeks ago, [chatGPT]() was released. It showed up on my twitter feed
-and I saw some interessting responsed from that chat bot.
+A couple of weeks ago, [chatGPT](https://chat.openai.com/) was released. It showed up on my twitter feed
+and I saw some interessting responses from that chat bot.
 I tried it out, mostly curious about it's abilities to generate, modify and debug code (C++ and R).
 
 I can't remember which exact response blew me away, but it was an answer to a request like this
@@ -55,6 +55,20 @@ That means the bot was able to understand the request from the short context I w
 Another example that where a soltuion was less obvious:
 
 ```sh
-I have SNP genotype data on a parent offspring trio. How can I check for the validty of the pedigree
-given the genotypes of the trio? In C++ please
+I have genotype data on a parent offspring trio. The data looks like this:
+Mother: 0,0,1,2,2,1
+Father: 0,1,1,2,1,0
+Offspring: 0,0,2,_,1,0
+
+The genotypes given indicate the number of copies of the major allele an individual carries
+at that loci. Genotypes are seprated by a comma (",").
+Can you fill the missing values in the offspring given the genotypes on the parents?
 ```
+
+# How does this work?
+
+The main engine behind chatGPT is the general language model GPT-3.
+
+# Immediate implications and use cases
+
+Given the coding abilities for chatGPT
