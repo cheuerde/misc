@@ -52,22 +52,32 @@ It was merely enough to explain what the input and output of the function was su
 a valid least squares routine without me even having to explain the operations necessary to arrive at the solution.
 That means the bot was able to understand the request from the short context I was giving (least squares estimator).
 
-Another example that where a soltuion was less obvious:
+Another example that was a soltuion was less obvious:
 
 ```sh
-I have genotype data on a parent offspring trio. The data looks like this:
-Mother: 0,0,1,2,2,1
-Father: 0,1,1,2,1,0
-Offspring: 0,0,2,_,1,0
-
-The genotypes given indicate the number of copies of the major allele an individual carries
-at that loci. Genotypes are seprated by a comma (",").
-Can you fill the missing values in the offspring given the genotypes on the parents?
+I have SNP genotype data on a parent offspring trio. 
+How can I check whether the pedigree is valid, given the genotypes of the
+trio? In R please
 ```
+
+```sh
+I have 3 sequences of characters. Every character can only be "A" or "B".
+The first two sequences are complete. The third sequence has missing values.
+Please fill in the missing values and incorporate the information you have seen
+in the first two sequences and note that the imputed character at any position
+must be present in of the the first two sequences.
+
+Here are the sequences (missing values are indivated by an underscore ("_")):
+1. AAABBAABA
+2. AABBABABA
+3. A_BB_BAAB
 
 # How does this work?
 
-The main engine behind chatGPT is the general language model GPT-3.
+The main engine behind chatGPT is the general language model GPT-3 that was trained using a [transformer neural net](https://arxiv.org/pdf/1706.03762.pdf).
+In essense, these language models are trained to predict the next sequence of words (or tokens) given the input text (prompt input, for example).
+That means the generated continuation of the text from the model, heavily depends on the context given
+by the input. 
 
 # Immediate implications and use cases
 
