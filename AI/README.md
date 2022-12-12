@@ -32,12 +32,10 @@ VectorXd leastSquaresEstimator(MatrixXd featureMatrix, VectorXd responseVector){
 int main(){
 
 	MatrixXd featureMatrix(2,2);
-	featureMatrix << 1, 2, 
-					 3, 4;
+	featureMatrix << 1, 2, 3, 4;
 
 	VectorXd responseVector(2);
-	responseVector << 5,
-					  6;
+	responseVector << 5, 6;
 
 	VectorXd coefficients = leastSquaresEstimator(featureMatrix, responseVector);
 
@@ -71,6 +69,7 @@ Here are the sequences (missing values are indivated by an underscore ("_")):
 1. AAABBAABA
 2. AABBABABA
 3. A_BB_BAAB
+```
 
 # How does this work?
 
@@ -81,4 +80,9 @@ by the input.
 
 # Immediate implications and use cases
 
-Given the coding abilities for chatGPT
+ - Given the coding abilities of chatGPT
+  - Massive productivity boost using chatGPT for "paired programming"
+  - Covers the entire development loop: Problem statement, solution brainstorming, implementation, debugging, compilation
+  - First commercial product, is a smart auto-complete called [github copilot](https://github.com/features/copilot)
+
+ - 
